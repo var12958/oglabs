@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans antialiased;
+    background: linear-gradient(180deg, #05060A 0%, #0A0A0F 50%, #090B14 100%) !important;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+}
+
+/* Make container backgrounds transparent so the global animated background shines through */
+.bg-background {
+  background-color: transparent !important;
+}
+
+/* Apply global frosted glass and soft shadow casting to all panels/cards */
+.bg-card {
+  background: rgba(17, 17, 24, 0.45) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-color: rgba(255, 255, 255, 0.04) !important;
+  box-shadow: 
+    inset 0 1px 0px rgba(255, 255, 255, 0.05),
+    0 16px 36px rgba(0, 0, 0, 0.45),
+    0 0 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Floating effect for hover-enabled cards */
+.bg-card.hover\:translate-y-\[-2px\]:hover {
+  border-color: rgba(124, 58, 237, 0.25) !important;
+  box-shadow: 
+    inset 0 1px 0px rgba(255, 255, 255, 0.07),
+    0 24px 48px rgba(124, 58, 237, 0.08),
+    0 12px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+@keyframes progressShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.progress-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  animation: progressShimmer 1.5s infinite;
+}
+
+@keyframes skeletonPulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.skeleton-pulse {
+  animation: skeletonPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+

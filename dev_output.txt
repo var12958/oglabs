@@ -1,0 +1,23 @@
+
+> hacky_finale@1.0.0 dev
+> next dev --webpack
+
+▲ Next.js 16.2.9 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://172.17.144.1:3000
+- Environments: .env.local
+✓ Ready in 708ms
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of c:\Users\Varun\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * c:\Users\Varun\Desktop\hacky_finale\package-lock.json
+
+
+[0g/store] Error: Request failed with status code 503
+ POST /api/0g/store 500 in 7.7s (next.js: 2.8s, application-code: 4.9s)
+ GET /api/0g/fetch 200 in 337ms (next.js: 312ms, application-code: 26ms)
+[0g/fetch] Error: Request failed with status code 503
+ GET /api/0g/fetch?rootHash=0xabc123 500 in 4.3s (next.js: 2ms, application-code: 4.3s)
+^C^C
