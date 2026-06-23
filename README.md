@@ -1,4 +1,4 @@
-# VaultSense
+# Cross Chain
 
 A simple Web3 dashboard that helps you keep an eye on your crypto wallet, spot risky tokens, and swap coins across blockchains safely.
 
